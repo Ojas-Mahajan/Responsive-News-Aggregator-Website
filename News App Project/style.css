@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
 
 * {
     padding: 0;
@@ -14,13 +16,15 @@
 }
 
 body {
-    font-family: "Poppins", sans-serif;
+    font-family:"Poppins", sans-serif; font-weight: 600;
+   
     color: var(--primary-text-color);
 }
 
 p {
-    font-family: "Roboto", sans-serif;
-    color: var(--secondary-text-color);
+    font-family: "Roboto", sans-serif; font-weight: 100;
+    font-weight: 300;  
+     color: var(--secondary-text-color);
     line-height: 1.4rem;
 }
 
@@ -149,6 +153,106 @@ main {
     padding: 12px;
 }
 
+
 .news-source {
     margin-block: 12px;
+}  */
+
+
+
+
+
+
+
+ /* // dark mode and modified ui */
+
+
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --card-bg: #f5f5f5;
+    --card-shadow: rgba(0, 0, 0, 0.1);
 }
+
+body.dark {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --card-bg: #1e1e1e;
+    --card-shadow: rgba(255, 255, 255, 0.05);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.card {
+    background-color: var(--card-bg);
+    box-shadow: 0 4px 12px var(--card-shadow);
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.01);
+}
+
+.mode-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    cursor: pointer;
+    box-shadow: 0 2px 6px var(--card-shadow);
+    z-index: 999;
+} 
+
+/* Dark mode */
+
+
+
+/* /// updated code */
+
+body.dark {
+    background-color: #121212;
+    color: #f0f0f0;
+  }
+  
+  body.dark .card {
+    background-color: #1e1e1e;
+    border-color: #333;
+  }
+  
+  body.dark nav,
+  body.dark header {
+    background-color: #1e1e1e;
+    color: #fff;
+  }
+  
+  body.dark .search-bar input[type="text"] {
+    background-color: #2b2b2b;
+    color: #f0f0f0;
+    border: 1px solid #444;
+  }
+  
+  body.dark .search-bar input[type="text"]::placeholder {
+    color: #aaa;
+  }
+  
+  body.dark .search-bar button {
+    background-color: #3d3d3d;
+    color: #fff;
+    border: 1px solid #555;
+  }
+  
+  body.dark .search-bar button:hover {
+    background-color: #555;
+  }
+  
+
+
