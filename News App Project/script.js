@@ -68,8 +68,7 @@
 
 
 
-
-const API_KEY = "1d3a0eefa97b499d8fbc4ee93eeb40b7";
+const API_KEY = "34b6c961750841ca8a0b00febff07e01";
 const url = "https://newsapi.org/v2/everything?q=";
 
 window.addEventListener("load", () => fetchNews("India"));
@@ -137,4 +136,19 @@ searchButton.addEventListener("click", () => {
     fetchNews(query);
     curSelectedNav?.classList.remove("active");
     curSelectedNav = null;
+});
+
+
+
+
+// dark mode features
+
+const darkModeToggle = document.getElementById("dark-mode-toggle");
+
+darkModeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+
+    darkModeToggle.textContent = document.body.classList.contains("dark")
+        ? "☀️ Light Mode"
+        : "🌓 Dark Mode";
 });
